@@ -1,2 +1,53 @@
 # iau-star-names
-Collection of IAU Working Group on Proper Star Names and Data, updated Monthly
+Collection of IAU Named Stars, with associated data
+
+## Data
+All IAU named stars are collected from [IAU-Catalog of Star Names](https://exopla.net/star-names/modern-iau-star-names/)
+
+`iau_data.csv`:
+- Proper Names
+- WGSN ID
+- Desgination
+- HIP
+- Bayer ID
+- Constellation
+- Origin
+- Ethnic/Cultural Group/Language
+- Reference
+- Additional Information
+- Date of Adoption
+
+`star_names.csv` data is collected via automatic web scrapping from [`in-the-sky.org`](https://github.com/cyschneck/Star-Chart-Spherical-Projection/blob/main/star_chart_spherical_projection/data/2_inthesky_star_data.csv) and [`wikipedia.org`](https://github.com/cyschneck/Star-Chart-Spherical-Projection/blob/main/star_chart_spherical_projection/data/3_backup_star_data.csv) (and some [manual additions](https://github.com/cyschneck/Star-Chart-Spherical-Projection/blob/main/star_chart_spherical_projection/data/0_missing_manual.csv))
+- Common Name
+- Right Ascension (HH.MM.SS)
+- Declination (DD.SS)
+- Magnitude (V, Visual)
+- Proper Motion Speed (mas/yr)
+- Proper Motion Angle (DD.SS)
+- Proper Motion RA (mas/yr)
+- Proper Motion DEC (mas/yr)
+- Alternative Names
+- URL
+
+## Development Environment
+To run or test against `star-chart-spherical-projection` github repo/fork, a development environment can be created via conda/miniconda
+
+First, [install Miniconda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html)
+
+Then, using the existing `environment.yml`, a new conda environment can be create to run/test scripts against
+
+```
+conda env create --file environment.yml
+```
+Once the environment has been built, activate the environment:
+```
+conda activate iau_stars
+```
+To run existing and new tests from the root directory:
+```
+python -m pytest
+```
+
+## Bibliography
+
+Named stars specified by ["IAU Catalog of Star Names"](https://exopla.net/star-names/modern-iau-star-names/) with the star position (right ascension and declination) as well as the angle and speed of proper motion from [in-the-sky.org](https://in-the-sky.org/) and Wikipedia where indicated
