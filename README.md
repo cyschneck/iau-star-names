@@ -1,5 +1,5 @@
 # iau-star-names
-Collection of IAU Named Stars, with associated data
+All IAU Named Stars with associated data as a `.csv`
 
 ## Data
 All IAU named stars are collected from [IAU-Catalog of Star Names](https://exopla.net/star-names/modern-iau-star-names/)

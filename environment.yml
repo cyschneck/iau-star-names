@@ -6,3 +6,4 @@ dependencies:
   - beautifulsoup4
   - numpy
   - pandas
+  - pre-commit  # dev: pre-commit hooks
