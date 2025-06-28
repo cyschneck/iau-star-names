@@ -43,7 +43,7 @@ def IAU_CSN(save_csv=False):
         columns = row.find_all(["th", "td"])
         row_data = [column.text.strip() for column in columns]
         if "proper names" not in row_data:
-            row_data[0] = re.sub(r"\(.*?\)","",row_data[0]).strip() # remove alternate name in parentheses
+            row_data[0] = re.sub(r"\(.*?\)","",row_data[0]).strip() # remove alternate name in parentheses (for example: "Bake-eo (or Bake Eo)" -> "Bake-eo")
             all_rows.append(row_data)
         else:
             if i == 0: 
@@ -350,7 +350,6 @@ def setupFinalCSV(save_csv=False):
 
         # add proper motion speed and angle from RA/Dec in backup links
         if np.isnan(row["Proper Motion Speed (mas/yr)"]) and not np.isnan(row["Proper Motion RA (mas/yr)"]) :
-            print(row)
             ra_value = float(row["Proper Motion RA (mas/yr)"])
             dec_value = float(row["Proper Motion DEC (mas/yr)"])
             pm_speed = np.sqrt(ra_value**2 + dec_value**2)
@@ -377,25 +376,22 @@ def compareOutputs():
     iau_stars = pd.read_csv("1_iau_stars.csv")["Proper Names"]
     sky_stars = pd.read_csv("4_all_stars_data.csv")["Common Name"]
     #print(f"All Stars:\n{list(sky_stars)}")
-    print(f"Length of IAU {len(iau_stars)} == Length of Found Stars {len(sky_stars)} = {len(list(iau_stars)) == len(list(sky_stars))}")
-    print(list(set(sky_stars) - set(iau_stars)))
+    #print(f"Length of IAU {len(iau_stars)} == Length of Found Stars {len(sky_stars)} = {len(list(iau_stars)) == len(list(sky_stars))}")
+    print(f"Length of IAU == Length of Found Stars - 1 = {len(iau_stars) == len(sky_stars)-1} (-1 to account for Unurgunite duplicate)")
     try:
-        assert len(list(iau_stars)) == len(list(sky_stars))
+        assert len(list(iau_stars)) == len(list(sky_stars))-1
     except:
-        try:
-            assert list(set(iau_stars) - set(sky_stars)) == ['Unurgunite'] # ignore duplicate star from IAU
-        except:
-            print(f"Missing stars =\n{list(set(iau_stars) - set(sky_stars))}")
+        print(f"Missing stars =\n{list(set(iau_stars) - set(sky_stars))}")
 
     
 if __name__ == '__main__':
-    #iau_dataframe = IAU_CSN(save_csv=True)                  # retrieve official list of IAU names -> saved to iau_stars.csv
-    #all_inthesky_pages = inTheSkyAllPages()                 # returns links to all pages in InTheSky
-    #inTheSkyAllStars(page_links=all_inthesky_pages,
-    #                iau_names=iau_dataframe,
-    #                save_csv=True)                          # iterate through InTheSky for IAU stars, saves stars to star_properties.csv
-    #backupStars(backup_links_csv="0_backup_links.csv",
-    #            save_csv=True)                              # iterate through backup list of stars
+    iau_dataframe = IAU_CSN(save_csv=True)                  # retrieve official list of IAU names -> saved to iau_stars.csv
+    all_inthesky_pages = inTheSkyAllPages()                 # returns links to all pages in InTheSky
+    inTheSkyAllStars(page_links=all_inthesky_pages,
+                    iau_names=iau_dataframe,
+                    save_csv=True)                          # iterate through InTheSky for IAU stars, saves stars to star_properties.csv
+    backupStars(backup_links_csv="0_backup_links.csv",
+                save_csv=True)                              # iterate through backup list of stars
     # combine csv into a single star data
-    #setupFinalCSV(save_csv=True)                            # combine manual missing stars, backup links, and inthesky into a single csv
+    setupFinalCSV(save_csv=True)                            # combine manual missing stars, backup links, and inthesky into a single csv
     compareOutputs()                                        # check if IAU stars match the found stars
