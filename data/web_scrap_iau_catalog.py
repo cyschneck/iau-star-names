@@ -43,6 +43,7 @@ def IAU_CSN(save_csv=False):
         columns = row.find_all(["th", "td"])
         row_data = [column.text.strip() for column in columns]
         if "proper names" not in row_data:
+            row_data[0] = re.sub(r"\(.*?\)","",row_data[0]).strip() # remove alternate name in parentheses
             all_rows.append(row_data)
         else:
             if i == 0: 
@@ -375,12 +376,16 @@ def compareOutputs():
     # compare number of stars with official names to number of stars found with full list of properties
     iau_stars = pd.read_csv("1_iau_stars.csv")["Proper Names"]
     sky_stars = pd.read_csv("4_all_stars_data.csv")["Common Name"]
-    print(f"All Stars:\n{list(sky_stars)}")
+    #print(f"All Stars:\n{list(sky_stars)}")
     print(f"Length of IAU {len(iau_stars)} == Length of Found Stars {len(sky_stars)} = {len(list(iau_stars)) == len(list(sky_stars))}")
+    print(list(set(sky_stars) - set(iau_stars)))
     try:
         assert len(list(iau_stars)) == len(list(sky_stars))
     except:
-        print(f"Missing stars =\n{list(set(iau_stars) - set(sky_stars))}")
+        try:
+            assert list(set(iau_stars) - set(sky_stars)) == ['Unurgunite'] # ignore duplicate star from IAU
+        except:
+            print(f"Missing stars =\n{list(set(iau_stars) - set(sky_stars))}")
 
     
 if __name__ == '__main__':
