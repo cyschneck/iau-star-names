@@ -55,6 +55,8 @@ def IAU_CSN(save_csv=False):
     column_names[0] = column_names[0].title() # capitalize "Proper Names"
     iau_stars = pd.DataFrame(all_rows[1:], columns=column_names)
     iau_stars = iau_stars.sort_values(iau_stars.columns[0], ascending=True)
+    # drop excess columns: "image, image_source, RA, DEC, mag that are not visible on site
+    iau_stars = iau_stars.drop(columns=["image", "image_source", "RA", "DEC", "mag"])
     if save_csv:
         iau_stars.to_csv("1_iau_stars.csv", index=False)
     return iau_stars
@@ -97,7 +99,6 @@ def inTheSkyAllStars(page_links=None, iau_names=None, save_csv=False):
                     star_data.append(star_property_dict)
         
     star_dataframe = pd.DataFrame(star_data)
-    #print(len(star_dataframe.index))
     if save_csv:
         star_dataframe.to_csv("2_inthesky_star_data.csv", index=False)
 
