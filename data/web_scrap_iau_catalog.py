@@ -1,6 +1,7 @@
 import re
 import random
 import logging
+import shutil
 
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -396,3 +397,7 @@ if __name__ == '__main__':
     # combine csv into a single star data
     setupFinalCSV(save_csv=True)                            # combine manual missing stars, backup links, and inthesky into a single csv
     compareOutputs()                                        # check if IAU stars match the found stars
+    # move copy to top of repo
+    shutil.copy("1_iau_stars.csv", "../iau_proper_stars.csv")
+    shutil.copy("4_all_stars_data.csv", "../stars_with_data.csv")
+
