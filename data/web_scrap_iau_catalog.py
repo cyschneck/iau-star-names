@@ -8,7 +8,7 @@ from urllib import request, error
 import numpy as np
 
 
-## Lgogggging set up
+## Logging set up
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 stream_handler = logging.StreamHandler()
@@ -26,9 +26,9 @@ user_agents = [
 
 def IAU_CSN(save_csv=False):
     # get all valid named stars
-    print("Retrieving from full IAU list")
     random_agent = random.choice(user_agents)
     iau_catalog_url = "https://exopla.net/star-names/modern-iau-star-names/"
+    print(f"Retrieving from full IAU list from {iau_catalog_url}")
     req_with_headers = request.Request(url=iau_catalog_url, headers={'User-Agent': random_agent})
 
     catalog_html = request.urlopen(req_with_headers).read()
@@ -136,11 +136,15 @@ def inTheSkyStarPage(page_link=None, iau_names=None, page_number=None, total_pag
         else:
             # get common name used by IAU, not used in website
             iau_name = iau_names.loc[iau_names["Designation"] == designation[0]]["Proper Names"]
-            print(iau_name)
-            print(page_link)
-            common_name = iau_name.item()
-            print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({designation[0]})")
-            
+            # edge case: Nganurganity and Unurgunite share a Designation/HIP
+            if len(iau_name) == 1:
+                common_name = iau_name.item()
+                print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({designation[0]})")
+            else:
+                common_name = list(iau_name)[0] # Use Nganurganity as Common Name
+                all_names.append(list(iau_name)[1]) # Save Unurgunite as an Alternative Name
+                print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({designation[0]})")
+
         star_values["Common Name"] = common_name
         star_values["Alternative Names"] = str(", ".join(all_names))
 
@@ -375,13 +379,13 @@ def compareOutputs():
     print(f"Length of IAU == Length of Found Stars = {len(list(iau_stars)) == len(list(sky_stars))}")
     
 if __name__ == '__main__':
-    iau_dataframe = IAU_CSN(save_csv=True)                  # retrieve official list of IAU names -> saved to iau_stars.csv
-    all_inthesky_pages = inTheSkyAllPages()                 # returns links to all pages in InTheSky
-    inTheSkyAllStars(page_links=all_inthesky_pages,
-                    iau_names=iau_dataframe,
-                    save_csv=True)                          # iterate through InTheSky for IAU stars, saves stars to star_properties.csv
-    backupStars(backup_links_csv="0_backup_links.csv",
-                save_csv=True)                              # iterate through backup list of stars
+    #iau_dataframe = IAU_CSN(save_csv=True)                  # retrieve official list of IAU names -> saved to iau_stars.csv
+    #all_inthesky_pages = inTheSkyAllPages()                 # returns links to all pages in InTheSky
+    #inTheSkyAllStars(page_links=all_inthesky_pages,
+    #                iau_names=iau_dataframe,
+    #                save_csv=True)                          # iterate through InTheSky for IAU stars, saves stars to star_properties.csv
+    #backupStars(backup_links_csv="0_backup_links.csv",
+    #            save_csv=True)                              # iterate through backup list of stars
     # combine csv into a single star data
-    setupFinalCSV(save_csv=True)                            # combine manual missing stars, backup links, and inthesky into a single csv
-    compareOutputs()                                        # check if IAU stars match the found stars
+    #setupFinalCSV(save_csv=True)                            # combine manual missing stars, backup links, and inthesky into a single csv
+    #compareOutputs()                                        # check if IAU stars match the found stars
