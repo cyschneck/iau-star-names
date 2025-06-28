@@ -349,6 +349,7 @@ def setupFinalCSV(save_csv=False):
 
         # add proper motion speed and angle from RA/Dec in backup links
         if np.isnan(row["Proper Motion Speed (mas/yr)"]) and not np.isnan(row["Proper Motion RA (mas/yr)"]) :
+            print(row)
             ra_value = float(row["Proper Motion RA (mas/yr)"])
             dec_value = float(row["Proper Motion DEC (mas/yr)"])
             pm_speed = np.sqrt(ra_value**2 + dec_value**2)
@@ -372,11 +373,15 @@ def setupFinalCSV(save_csv=False):
     
 def compareOutputs():
     # compare number of stars with official names to number of stars found with full list of properties
-    iau_stars = pd.read_csv("1_iau_stars.csv")["Common Name"]
+    iau_stars = pd.read_csv("1_iau_stars.csv")["Proper Names"]
     sky_stars = pd.read_csv("4_all_stars_data.csv")["Common Name"]
     print(f"All Stars:\n{list(sky_stars)}")
-    assert len(list(iau_stars)) == len(list(sky_stars))
-    print(f"Length of IAU == Length of Found Stars = {len(list(iau_stars)) == len(list(sky_stars))}")
+    print(f"Length of IAU {len(iau_stars)} == Length of Found Stars {len(sky_stars)} = {len(list(iau_stars)) == len(list(sky_stars))}")
+    try:
+        assert len(list(iau_stars)) == len(list(sky_stars))
+    except:
+        print(f"Missing stars =\n{list(set(iau_stars) - set(sky_stars))}")
+
     
 if __name__ == '__main__':
     #iau_dataframe = IAU_CSN(save_csv=True)                  # retrieve official list of IAU names -> saved to iau_stars.csv
@@ -388,4 +393,4 @@ if __name__ == '__main__':
     #            save_csv=True)                              # iterate through backup list of stars
     # combine csv into a single star data
     #setupFinalCSV(save_csv=True)                            # combine manual missing stars, backup links, and inthesky into a single csv
-    #compareOutputs()                                        # check if IAU stars match the found stars
+    compareOutputs()                                        # check if IAU stars match the found stars
