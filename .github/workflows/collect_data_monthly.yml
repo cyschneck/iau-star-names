@@ -26,7 +26,7 @@ jobs:
 
     - name: Web Scrap for New Changes
       working-directory: data
-      run: python web_scrap_iau_catalog.py
+      run: python -c "from web_scrap_iau_catalog import IAU_CSN; IAU_CSN(save_csv=True)"
 
 
     - name: Check if script results in changes in files
