@@ -1,9 +1,6 @@
 # iau-star-names
 [![collect-data-monthly](https://github.com/cyschneck/iau-star-names/actions/workflows/collect_data_monthly.yml/badge.svg)](https://github.com/cyschneck/iau-star-names/actions/workflows/collect_data_monthly.yml)
 
-All IAU Named Stars with associated data as a `.csv`
-
-## Data
 All IAU named stars are collected from [IAU-Catalog of Star Names](https://exopla.net/star-names/modern-iau-star-names/)
 
 `iau_data.csv`:
