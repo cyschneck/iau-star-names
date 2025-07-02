@@ -45,10 +45,6 @@ Once the environment has been built, activate the environment:
 ```
 conda activate iau_stars
 ```
-To run existing and new tests from the root directory:
-```
-python -m pytest
-```
 
 ## Bibliography
 
