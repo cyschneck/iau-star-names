@@ -25,8 +25,8 @@ jobs:
         pip install -r requirements.txt
 
     - name: Web Scrap for New Changes
-    working-directory: data
-    run: python web_scrap_iau_catalog.py
+      working-directory: data
+      run: python web_scrap_iau_catalog.py
 
 
     - name: Check if script results in changes in files
