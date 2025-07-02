@@ -32,11 +32,11 @@ All IAU named stars are collected from [IAU-Catalog of Star Names](https://exopl
 > IAU WGSN distinguishes between the star `Nganurganity` and `Unurgunite`, even though they share the same Designation (HR 2646) and HIP (33856) that both represent the star [Sigma Canis Majoris](https://en.wikipedia.org/wiki/Sigma_Canis_Majoris). In the `star_data.csv` this will be listed as `Nganurganity` with `Unurgunite` in the list of alternative names
 
 ## Development Environment
-To run or test against `star-chart-spherical-projection` github repo/fork, a development environment can be created via conda/miniconda
+To run or test against this github repo/fork, a development environment can be created via conda/miniconda
 
 First, [install Miniconda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html)
 
-Then, using the existing `environment.yml`, a new conda environment can be create to run/test scripts against
+Then, using the existing `environment.yml`, a new conda environment can be create to run against
 
 ```
 conda env create --file environment.yml
