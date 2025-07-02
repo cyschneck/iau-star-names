@@ -278,7 +278,8 @@ def wikipediaLinks(row_data=None):
             mag_text = re.sub(r"\(.*?\)","",mag_text) # remove links in parenthesis
             mag_text = mag_text.replace(u'\xa0', u' ')# remove non-breaking space in string
             mag_text = mag_text.replace("+", "") # remove positive sign
-            mag_text = mag_text.replace("/", " ") # remove cross sign
+            mag_text = mag_text.replace("/", " ") # remove alternate value
+            mag_text = mag_text.replace("~", "") # remove ~ sign
             mag_text = mag_text.split(" ")[0]
             mag_text = mag_text.split("±")[0]
             mag_text = mag_text.strip()
@@ -391,7 +392,6 @@ if __name__ == '__main__':
     iau_dataframe = IAU_CSN(save_csv=True)                  # retrieve official list of IAU names -> saved to iau_stars.csv
     
     ## Additional Steps Run as needed:
-    '''
     all_inthesky_pages = inTheSkyAllPages()                 # returns links to all pages in InTheSky
     inTheSkyAllStars(page_links=all_inthesky_pages,
                     iau_names=iau_dataframe,
@@ -404,4 +404,3 @@ if __name__ == '__main__':
     # move copy to top of repo
     shutil.copy("1_iau_stars.csv", "../iau_proper_stars.csv")
     shutil.copy("4_all_stars_data.csv", "../stars_with_data.csv")
-    '''
