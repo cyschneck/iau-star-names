@@ -1,0 +1,46 @@
+name: collect-data-monthly
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 2 * *' # “At 00:00 on day-of-month 2” (on the 2nd of the month)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        architecture: 'x64'
+      env:
+          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
+
+    - name: pip install requirements
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Web Scrap for New Changes
+    working-directory: data
+    run: python web_scrap_iau_catalog.py
+
+
+    - name: Check if script results in changes in files
+      uses: tj-actions/verify-changed-files@v20
+      id: verify-changed-files
+
+    - name: If file changed, throw error to review changes
+      if: steps.verify-changed-files.outputs.files_changed == 'true'
+      run: |
+        echo "Github Actions: review changes to data files"
+        echo "Update IAU CSV"
+        exit 1
+
+    - name: If no changes to existing files are found, pass
+      if: steps.verify-changed-files.outputs.files_changed == 'false'
+      run: |
+        echo "Github Actions: update csv scripts has no changes"

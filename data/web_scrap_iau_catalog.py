@@ -387,7 +387,11 @@ def compareOutputs():
 
     
 if __name__ == '__main__':
+    # Collect dta from IAU WSGN (run monthly via Github Actions)
     iau_dataframe = IAU_CSN(save_csv=True)                  # retrieve official list of IAU names -> saved to iau_stars.csv
+    
+    ## Additional Steps Run as needed:
+    '''
     all_inthesky_pages = inTheSkyAllPages()                 # returns links to all pages in InTheSky
     inTheSkyAllStars(page_links=all_inthesky_pages,
                     iau_names=iau_dataframe,
@@ -400,4 +404,4 @@ if __name__ == '__main__':
     # move copy to top of repo
     shutil.copy("1_iau_stars.csv", "../iau_proper_stars.csv")
     shutil.copy("4_all_stars_data.csv", "../stars_with_data.csv")
-
+    '''
