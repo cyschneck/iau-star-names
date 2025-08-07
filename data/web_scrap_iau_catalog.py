@@ -1,6 +1,7 @@
 import re
 import random
 import logging
+import string
 import shutil
 
 from bs4 import BeautifulSoup
@@ -59,6 +60,7 @@ def IAU_CSN(save_csv=False):
     # drop excess columns: "image, image_source, RA, DEC, mag that are not visible on site
     iau_stars = iau_stars.drop(columns=["image", "image_source", "RA", "DEC", "mag"])
     if save_csv:
+        iau_stars["Proper Names"] = iau_stars["Proper Names"].apply(lambda x: string.capwords(x))
         iau_stars.to_csv("1_iau_stars.csv", index=False)
     return iau_stars
     
@@ -372,6 +374,7 @@ def setupFinalCSV(save_csv=False):
     
     if save_csv:
         combined_df = combined_df.sort_values("Common Name", ascending=True) # sort by Common Name
+        combined_df["Common Name"] = combined_df["Common Name"].apply(lambda x: string.capwords(x))
         combined_df.to_csv("4_all_stars_data.csv", index=False)
     
 def compareOutputs():
