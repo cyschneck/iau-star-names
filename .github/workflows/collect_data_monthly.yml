@@ -24,9 +24,9 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Web Scrap for New Changes
+    - name: Web Scrape for New Changes
       working-directory: data
-      run: python -c "from web_scrap_iau_catalog import IAU_CSN; IAU_CSN(save_csv=True)"
+      run: python -c "from web_scrape_iau_catalog import IAU_CSN; IAU_CSN(save_csv=True)"
 
 
     - name: Check if script results in changes in files

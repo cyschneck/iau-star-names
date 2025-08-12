@@ -208,7 +208,7 @@ def inTheSkyStarPage(page_link=None, iau_names=None, page_number=None, total_pag
 def backupStars(backup_links_csv=None, save_csv=False):
     # add stars not found inTheSky to stars, from a list of backup links manually created
     backup_links_df = pd.read_csv(backup_links_csv)
-    print("Collecting from backup links")
+    print("Collecting from backup links...")
 
     star_data = []
     
