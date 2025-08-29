@@ -403,6 +403,7 @@ if __name__ == '__main__':
                 save_csv=True)                              # iterate through backup list of stars
     # combine csv into a single star data
     setupFinalCSV(save_csv=True)                            # combine manual missing stars, backup links, and inthesky into a single csv
+    # compare outputs to ensure all stars are found
     compareOutputs()                                        # check if IAU stars match the found stars
     # move copy to top of repo
     shutil.copy("1_iau_stars.csv", "../iau_proper_stars.csv")
