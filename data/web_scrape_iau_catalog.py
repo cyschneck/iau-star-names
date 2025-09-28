@@ -284,6 +284,7 @@ def wikipediaLinks(row_data=None):
             mag_text = mag_text.replace("~", "") # remove ~ sign
             mag_text = mag_text.split(" ")[0]
             mag_text = mag_text.split("±")[0]
+            mag_text = mag_text.split("–")[0]
             mag_text = mag_text.strip()
             star_values["Magnitude (V, Visual)"] = mag_text
         if "proper motion" in row.text.lower():
