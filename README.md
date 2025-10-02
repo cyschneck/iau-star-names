@@ -34,7 +34,7 @@ Last updated: **September 28, 2025**
 > IAU WGSN distinguishes between the star `Nganurganity` and `Unurgunite`, even though they share the same Designation (HR 2646) and HIP (33856) that both represent the star [Sigma Canis Majoris](https://en.wikipedia.org/wiki/Sigma_Canis_Majoris). In the `star_data.csv` this will be listed as `Nganurganity` with `Unurgunite` in the list of alternative names
 
 > [!IMPORTANT]
-> Betelgeuse's companion star, Betelgeuse B (offically named `Siwarha`) was declared on [July 24, 2025](https://iopscience.iop.org/article/10.3847/2041-8213/adeaaf) and, as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
+> Betelgeuse's companion star, Betelgeuse B (offically named `Siwarha`) was declared on [July 24, 2025](https://iopscience.iop.org/article/10.3847/2041-8213/adeaaf) and, as of yet, has no designation or proper motion so it is not currently included in `stars_with_data.csv`
 
 ## Development Environment
 To run or test against this github repo/fork, a development environment can be created via conda/miniconda
