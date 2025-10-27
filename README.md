@@ -3,7 +3,7 @@
 
 All IAU named stars are collected from [IAU-Catalog of Star Names](https://exopla.net/star-names/modern-iau-star-names/)
 
-Last updated: **October 13, 2025**
+Last updated: **October 27, 2025**
 
 `iau_data.csv`:
 - Proper Names
@@ -18,7 +18,7 @@ Last updated: **October 13, 2025**
 - Additional Information
 - Date of Adoption
 
-`star_names.csv` data is collected via automatic web scraping from [`in-the-sky.org`](https://github.com/cyschneck/Star-Chart-Spherical-Projection/blob/main/star_chart_spherical_projection/data/2_inthesky_star_data.csv) and [`wikipedia.org`](https://github.com/cyschneck/Star-Chart-Spherical-Projection/blob/main/star_chart_spherical_projection/data/3_backup_star_data.csv) (and some [manual additions](https://github.com/cyschneck/Star-Chart-Spherical-Projection/blob/main/star_chart_spherical_projection/data/0_missing_manual.csv))
+`star_names.csv` data is collected via automatic web scraping from [`in-the-sky.org`](https://github.com/cyschneck/iau-star-names/blob/main/data/2_inthesky_star_data.csv) and [`wikipedia.org`](https://github.com/cyschneck/Star-Chart-Spherical-Projection/blob/main/star_chart_spherical_projection/data/3_backup_star_data.csv) (and some [manual additions](https://github.com/cyschneck/iau-star-names/blob/main/data/0_missing_manual.csv)
 - Common Name
 - Right Ascension (HH.MM.SS)
 - Declination (DD.SS)

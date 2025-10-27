@@ -384,7 +384,7 @@ def compareOutputs():
     sky_stars = pd.read_csv("4_all_stars_data.csv")["Common Name"]
     #print(f"All Stars:\n{list(sky_stars)}")
     #print(f"Length of IAU {len(iau_stars)} == Length of Found Stars {len(sky_stars)} = {len(list(iau_stars)) == len(list(sky_stars))}")
-    print(f"Length of IAU == Length of Found Stars - 1 = {len(iau_stars) == len(sky_stars)-1} (-1 to account for Unurgunite duplicate)")
+    print(f"Length of IAU == Length of Found Stars - 1 = {len(iau_stars) == len(sky_stars)-2} (-2 to account for Unurgunite and Siwarha duplicate)")
     try:
         assert len(list(iau_stars)) == len(list(sky_stars))-1
     except:
