@@ -128,7 +128,7 @@ Canopus,06.23.57,-52.4144,-0.63,30.6,40.6,19.9137,23.2337,"Canopus, α-Car, Alph
 Capella,05.16.41,45.5956,0.08,433.5,170.0,75.2765,-426.9142,"Capella, α-Aur, Alpha Aurigae, 13-Aur, 13 Aurigae, HR 1708, HD 34029, NSV 1897, HIP 24608",https://in-the-sky.org/data/object.php?id=HIP24608
 Caph,00.09.10,59.09,2.28,553.5,109.0,523.3445,-180.202,"Caph, β-Cas, Beta Cassiopeiae, 11-Cas, 11 Cassiopeiae, HR 21, HD 432, HIP 746, TYC 3664-1985-1",https://in-the-sky.org/data/object.php?id=TYC3664-1985-1
 Castor,07.34.35,31.5318,1.58,240.3,232.8,-191.4061,-145.2852,"Castor, YY Gem, α-Gem, Alpha Geminorum, 66-Gem, 66 Geminorum, HR 2891, HD 60179, HIP 36850, TYC 2457-2407-1, Gaia EDR3- 892348694913501952",https://in-the-sky.org/data/object.php?id=TYC2457-2407-1
-Castula,00.56.3990413,59.10518006,4.62,102.5269,243.9165,-92.085,-45.079,"Castula, υ2 Cas, 28 Cassiopeiae, BD+58°138, HD 5395, HIP 4422, HR 265, SAO 21855",https://en.wikipedia.org/wiki/Upsilon2_Cassiopeiae
+Castula,00.56.39905,59.105181,4.62,103.1392,243.8864,-92.611,-45.397,"Castula, υ2 Cas, 28 Cassiopeiae, BD+58°138, HD 5395, HIP 4422, HR 265, SAO 21855",https://en.wikipedia.org/wiki/Upsilon2_Cassiopeiae
 Cebalrai,17.43.28,4.3404,2.75,164.8,345.3,-41.8193,159.4057,"Cebalrai, β-Oph, Beta Ophiuchi, 60-Oph, 60 Ophiuchi, HR 6603, HD 161096, HIP 86742, TYC 423-1724-1, Gaia EDR3- 4473334474604992384",https://in-the-sky.org/data/object.php?id=TYC423-1724-1
 Ceibo,07.39.2185290,-78.16443078,9.36,44.4581,206.0959,-19.556,-39.926,"Ceibo, CD−77°298, CPD−77°324, HD 63454, HIP 37284, TYC 9385-1045-1",https://en.wikipedia.org/wiki/HD_63454
 Celaeno,03.44.482154,24.1722093,5.448,48.6388,244.7732,20.73,-44.0,"16 Tauri, HR 1140, HD 23288, BD+23 505, HIP 17489, SAO 76126, GC 4475.",https://en.wikipedia.org/wiki/Celaeno_(star)
@@ -179,7 +179,7 @@ Errai,23.39.20,77.3756,3.21,135.4,339.3,-47.8605,126.6591,"Errai, γ-Cep, Gamma 
 Fafnir,18.25.5913696,65.33485313,4.82,109.1684,194.2358,105.816,-26.846,"Fafnir, BD+65°1271, GC 25212, HD 170693, HIP 90344, HR 6945, SAO 17888, PPM 20916, GCRV 10941",https://en.wikipedia.org/wiki/42_Draconis
 Fang,15.58.51,-26.0651,2.89,29.0,205.3,-12.3934,-26.2184,"π-Sco, Pi Scorpii, 6-Sco, 6 Scorpii, HR 5944, HD 143018, NSV 7371, HIP 78265, TYC 6783-2697-1, Gaia EDR3- 6235406071207202688",https://in-the-sky.org/data/object.php?id=TYC6783-2697-1
 Fawaris,19.44.58,45.0751,2.91,63.2,41.5,41.8776,47.334,"δ-Cyg, Delta Cygni, 18-Cyg, 18 Cygni, HR 7528, HD 186882, NSV 12380, HIP 97165, TYC 3557-2486-1, Gaia EDR3- 2079784488001577600",https://in-the-sky.org/data/object.php?id=TYC3557-2486-1
-Felis,09.54.522045,-19.003362,4.94,60.7995,228.2869,-45.386,-40.456,"Felis, 183 G. Hydrae, BD−18° 2810, FK5 373, GC 13644, HIP 48615, HR 3923, SAO 155588",https://en.wikipedia.org/wiki/HD_85951
+Felis,09.54.522045,-19.003362,4.94,60.7995,228.2869,-45.386,-40.456,"Felis, 183 G. Hydrae, BD−18°2810, FK5 373, GC 13644, HD 85951, HIP 48615, HR 3923, SAO 155588",https://en.wikipedia.org/wiki/HD_85951
 Felixvarela,00.28.34306,-16.133484,9.62,421.8571,237.2853,-354.939,-227.995,"Felixvarela, HIP 2247, SAO 147293, PPM 208851, 2MASS J00283433-1613343",https://en.wikipedia.org/wiki/BD%E2%88%9217_63
 Filetdor,09.39.3003,-20.585671,9.351,56.1557,11.22,-55.0824,10.9266,"Filetdor, WASP-166",https://exoplanetarchive.ipac.caltech.edu/overview/WASP-166
 Flegetonte,11.45.4229278,2.49173262,8.07,220.1843,239.0001,-188.735,-113.403,"BD+03°2549, HD 102195, HIP 57370, HR 4293, SAO 119033, LTT 13232, NLTT 28458",https://en.wikipedia.org/wiki/HD_102195
@@ -505,7 +505,7 @@ Zaniah,12.19.54,-0.4,3.87,62.8,246.4,-57.5476,-25.1419,"Zaniah, η-Vir, Eta Virg
 Zaurak,03.58.01,-13.303,2.96,128.8,151.4,61.6555,-113.0842,"Zaurak, γ-Eri, Gamma Eridani, 34-Eri, 34 Eridani, HR 1231, HD 25025, HIP 18543, TYC 5311-1285-1",https://in-the-sky.org/data/object.php?id=TYC5311-1285-1
 Zavijava,11.50.42,1.4548,3.59,788.7,110.1,740.6636,-271.0444,"Zavijava, β-Vir, Beta Virginis, 5-Vir, 5 Virginis, HR 4540, HD 102870, HIP 57757, TYC 273-924-1, Gaia EDR3- 3796442680948579328",https://in-the-sky.org/data/object.php?id=TYC273-924-1
 Zembra,22.36.063189546696,-16.5959788096584,12.469,137.5511,232.1309,-108.585,-84.437,"Zembra, HATS-72",https://simbad.cds.unistra.fr/simbad/sim-id?Ident=%408855298&Name=HATS-72&submit=submit
-Zhang,09.51.2869384,-14.5047771,4.12,28.8769,229.1706,18.88,-21.85,"Zhang, upsilon1 Hya, 39 Hydrae, BD−14°2963, HD 85444, HIP 48356, HR 3903, SAO 155542",https://en.wikipedia.org/wiki/Upsilon1_Hydrae
+Zhang,09.51.2869384,-14.5047771,4.12,28.8769,229.1706,18.88,-21.85,"Zhang, υ1 Hya, 39 Hya, BD−14°2963, HD 85444, HIP 48356, HR 3903, SAO 155542",https://en.wikipedia.org/wiki/Upsilon1_Hydrae
 Zhou,15.46.11,15.2517,3.64,81.5,125.9,66.0184,-47.7893,"β-Ser, Beta Serpentis Caput, 28-Ser, 28 Serpentis Caput, HR 5867, HD 141003, HIP 77233, TYC 1495-1994-1, Gaia EDR3- 1195823284391343104",https://in-the-sky.org/data/object.php?id=TYC1495-1994-1
 Zibal,03.15.5002656,-8.4911022,4.8,46.1013,89.565,-0.35,46.1,"Zibal, ζ Eri, 13 Eri, FK5 1091, HD 20320, HIP 15197, HR 984, SAO 130387, BD−09°624, WDS J03158-0849A",https://en.wikipedia.org/wiki/Zeta_Eridani
 Zosma,11.14.06,20.3126,2.56,193.5,132.2,143.3457,-129.9779,"Zosma, δ-Leo, Delta Leonis, 68-Leo, 68 Leonis, HR 4357, HD 97603, NSV 5143, HIP 54872, TYC 1439-2479-1",https://in-the-sky.org/data/object.php?id=TYC1439-2479-1
