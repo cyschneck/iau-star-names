@@ -131,24 +131,37 @@ def inTheSkyStarPage(page_link=None, iau_names=None, page_number=None, total_pag
     # if either the common name is found or the desgination is found in the list of possible
     common_name = list(set(iau_names["Proper Names"]).intersection(all_names))
     designation = list(set(iau_names["Designation"]).intersection(all_names))
+    HIP_id = list(set("HIP " + iau_names["HIP"]).intersection(all_names))
 
     # if star is a valid IAU star, with a value shared name
     data = []
-    if len(common_name) == 1 or len(designation) == 1: 
+    if len(common_name) == 1 or len(designation) == 1 or len(HIP_id) == 1:
+        # a valid name is based on HIP or Desgination, not common name
+        if len(designation) == 1:
+            # by default, use desgination value
+            id_value = designation[0]
+        if len(designation) == 0 and len(HIP_id) == 1:
+           # some values desginations on IAU are in an invalid format, but HIP is valid (for example, Acrux)
+           id_value = HIP_id[0]
+
         if len(common_name) == 1:
             common_name = common_name[0]
-            print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({designation[0]})")
+            print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({id_value})")
         else:
-            # get common name used by IAU, not used in website
-            iau_name = iau_names.loc[iau_names["Designation"] == designation[0]]["Proper Names"]
+            # get common name used by IAU, if not used in website
+            if "HIP" not in id_value:
+                iau_name = iau_names.loc[iau_names["Designation"] == designation[0]]["Proper Names"]
+            else:
+                iau_name = iau_names.loc[iau_names["HIP"] == HIP_id[0].replace("HIP ", "")]["Proper Names"]
+            
             # edge case: Nganurganity and Unurgunite share a Designation/HIP
             if len(iau_name) == 1:
                 common_name = iau_name.item()
-                print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({designation[0]})")
+                print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({id_value})")
             else:
                 common_name = list(iau_name)[0] # Use Nganurganity as Common Name
                 all_names.append(list(iau_name)[1]) # Save Unurgunite as an Alternative Name
-                print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({designation[0]})")
+                print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({id_value})")
 
         star_values["Common Name"] = common_name
         star_values["Alternative Names"] = str(", ".join(all_names))
@@ -390,18 +403,49 @@ def compareOutputs():
     except:
         print(f"Missing stars =\n{list(set(iau_stars) - set(sky_stars))}")
 
-    
+def verifyNotFoundTwiceInBackup():
+    # verify that stars are not found in two places, defaults to use inthesky, not backup_links or manual additions
+    df_sky = pd.read_csv("2_inthesky_star_data.csv")
+
+    df_bac = pd.read_csv("0_backup_links.csv")
+    backup_duplicates = list(set(list(df_sky["Common Name"])).intersection(list(df_bac["Common Name"])))
+
+    df_man = pd.read_csv("0_missing_manual.csv")
+    manual_duplicates = list(set(list(df_sky["Common Name"])).intersection(list(df_man["Common Name"])))
+
+    return backup_duplicates, manual_duplicates
+
+def alphabetizeCSVs():
+   csvs = ["0_backup_links.csv", "0_missing_manual.csv"]
+   for csv in csvs:
+       df = pd.read_csv(csv)
+       sorted_df = df.sort_values(by="Common Name")
+       sorted_df.to_csv(csv, index=False)
+
 if __name__ == '__main__':
+    # Organie manual/backup links alphabetically
+    alphabetizeCSVs()
+
     # Collect dta from IAU WSGN (run monthly via Github Actions)
     iau_dataframe = IAU_CSN(save_csv=True)                  # retrieve official list of IAU names -> saved to iau_stars.csv
-    
+
     ## Additional Steps Run as needed:
     all_inthesky_pages = inTheSkyAllPages()                 # returns links to all pages in InTheSky
     inTheSkyAllStars(page_links=all_inthesky_pages,
                     iau_names=iau_dataframe,
                     save_csv=True)                          # iterate through InTheSky for IAU stars, saves stars to star_properties.csv
+
+    ## Check that backup/manual links are still relevant (with no duplicates from inthesky)
+    backup_duplicates, manual_duplicates = verifyNotFoundTwiceInBackup()
+    if len(backup_duplicates) > 0:
+       print(f"Duplicates found in `0_backup_links.csv` that should be removed: {backup_duplicates}")
+       exit()
+    if len(manual_duplicates) > 0:
+       print(f"Duplicates found in `0_missing_manual.csv` links that should be removed: {manual_duplicates}")
+       exit()
     backupStars(backup_links_csv="0_backup_links.csv",
                 save_csv=True)                              # iterate through backup list of stars
+
     # combine csv into a single star data
     setupFinalCSV(save_csv=True)                            # combine manual missing stars, backup links, and inthesky into a single csv
     # compare outputs to ensure all stars are found
