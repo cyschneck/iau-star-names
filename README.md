@@ -3,7 +3,7 @@
 
 All IAU named stars are collected from [IAU-Catalog of Star Names](https://exopla.net/star-names/modern-iau-star-names/)
 
-Last updated: **November 29, 2025**
+Last updated: **December 9, 2025**
 
 `iau_data.csv`:
 - Proper Names
