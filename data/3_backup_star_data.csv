@@ -48,7 +48,7 @@ Buna,02.37.0191118,42.03454685,7.28,-38.864,-41.234,"BD+41°496, HIP 12191, SAO 
 Bélénos,01.25.1251573,28.34001030,7.12,251.270,-157.570,"Bélénos, BD+27°225, GC 1710, HD 8574, HIP 6643, SAO 74702, LTT 10508, NLTT 4709",https://en.wikipedia.org/wiki/HD_8574
 Castula,00.56.39905,59.105181,4.62,-92.611,-45.397,"Castula, υ2 Cas, 28 Cassiopeiae, BD+58°138, HD 5395, HIP 4422, HR 265, SAO 21855",https://en.wikipedia.org/wiki/Upsilon2_Cassiopeiae
 Ceibo,07.39.2185290,-78.16443078,9.36,-19.556,-39.926,"Ceibo, CD−77°298, CPD−77°324, HD 63454, HIP 37284, TYC 9385-1045-1",https://en.wikipedia.org/wiki/HD_63454
-Celaeno,03.44.482154,24.1722093,5.448,20.73,-44.00,"16 Tauri, HR 1140, HD 23288, BD+23 505, HIP 17489, SAO 76126, GC 4475.",https://en.wikipedia.org/wiki/Celaeno_(star)
+Celaeno,03.44.482154,24.1722093,5.448,20.73,-44.00,"Celaeno, Celeno, 16 Tau, BD+23 505, GC 4475, HD 23288, HIP 17489, HR 1140, SAO 76126",https://en.wikipedia.org/wiki/Celaeno_(star)
 Cervantes,17.44.0870314,-51.50025916,5.15,-15.034,-190.901,"Cervantes, μ Arae, CD−51°11094, FK5 662, GC 24024, GJ 691, HD 160691, HIP 86796, HR 6585, SAO 244981, PPM 346258, LTT 7053",https://en.wikipedia.org/wiki/Mu_Arae
 Cexing,00.32.59992,62.555441,4.12,3.65,-2.07,"Cexing, κ Cas, 15 Cassiopeiae, BD+62°102, FK5 16, GC 645, HD 2905, HIP 2599, HR 130, SAO 11256",https://en.wikipedia.org/wiki/Kappa_Cassiopeiae
 Chalawan,10.59.279728,40.2548921,5.03,-316.850,55.180,"Chalawan, 47 UMa, BD+41°2147, FK5 1282, GC 15087, GJ 407, HD 95128, HIP 53721, HR 4277, SAO 43557, LTT 12934, PLX 2556.00",https://en.wikipedia.org/wiki/47_Ursae_Majoris
@@ -61,6 +61,7 @@ Citalá,07.00.18036,-05.220178,6.29,-116.513,80.633,"Citalá, BD−05°1910, HD 
 Cocibolca,00.44.2665067,-26.30564555,7.78,313.556,149.324,"Cocibolca, CD−27°223, GJ 9024, HD 4208, HIP 3479, SAO 166526, LTT 410",https://en.wikipedia.org/wiki/HD_4208
 Copernicus,08.52.408627,28.1958821,13.15,-481.176,-244.544,"Copernicus, Rho1 Cancri, 55 Cnc, BD+28°1660, GJ 324, HD 75732, HIP 43587, HR 3522, SAO 80585",https://en.wikipedia.org/wiki/55_Cancri
 Cujam,16.25.2495425,14.01597711,4.5821,40.86,-59.71,"Cujam, ω Her, 24 Her, 51 Ser, BD+14°3049, FK5 613, HD 148112, HIP 80463, HR 6117, SAO 102153, WDS J16254+1402AB",https://en.wikipedia.org/wiki/Omega_Herculis
+Custos,03.49.3127755,65.31335258,4.39,0.319,-15.593,"Custos, BE Cam, BD+65°369, HD 23475, HIP 17884, HR 1155, SAO 12916",https://en.wikipedia.org/wiki/BE_Camelopardalis
 Dajiangjunbei,01.43.3963792,50.41194328,4.06,24.59,-14.01,"Dajiangjunbei, φ Per, 54 And, BD+49°444, FK5 57, GC 2102, HD 10516, HIP 8068, HR 496, SAO 22554, PPM 26670",https://en.wikipedia.org/wiki/Phi_Persei
 Danfeng,23.20.0752452,-60.03546447,11.02,-319.924,-127.782,"Danfeng, CD−60 8051, GJ 4332, HIP 115211, L 168-9, LTT 9494, NLTT 56509, PM J23201-6003, TOI-134, TIC 234994474, TYC 9126-748-1, 2MASS J23200751-6003545, WISEA J232007.06-600355.8",https://en.wikipedia.org/wiki/L_168-9
 Deltoton,02.17.0323016,34.13272260,4.865,1151.83,-246.89,"Deltoton, δ Tri, Delta Tri, 8 Trianguli, BD+33°395, GJ 92, HD 13974, HIP 10644, HR 660, SAO 55420, LHS 154, LTT 10770",https://en.wikipedia.org/wiki/Delta_Trianguli
@@ -108,6 +109,7 @@ Junnanmen,01.09.3012562,47.14304594,4.25,4.05,-12.43,"Junnanmen, φ And, 42 And,
 Kaewkosin,07.59.0583953,15.23292361,12.330,-185.706,-56.994,"Kaewkosin, GJ 3470, LP 424-4, NLTT 18739, PM J07590+1523, TIC 19028197, 2MASS J07590587+1523294",https://en.wikipedia.org/wiki/GJ_3470
 Kaffalmusalsala,23.40.24508,44.200216,4.139,79.998,-19.011,"Kaffalmusalsala, κ And, 19 Andromedae, BD+43°4522, FK5 1619, HD 222439, HIP 116805, HR 8976, SAO 53264, PPM 64525",https://en.wikipedia.org/wiki/Kappa_Andromedae
 Kalausi,09.37.118275,-43.1619934,8.23,21.805,-120.094,"Kalausi, CD–42°5452, GC 13300, HD 83443, HIP 47202, SAO 221348, 2MASS J09371182-4316198",https://en.wikipedia.org/wiki/HD_83443
+Kamelos,06.40.2887701,77.59448179,5.72,13.997,-5.701,"Kamelos, AG+78°144, BD+78°227, FK5 2507, GC 8574, HD 45866, HIP 31940, HR 2363, SAO 5919",https://en.wikipedia.org/wiki/HD_45866
 Kamuy,16.10.0391440,26.44338932,6.57,-18.354,36.856,"BD+27°2595, HD 145457, HIP 79219, SAO 84223",https://en.wikipedia.org/wiki/HD_145457
 Kang,14.12.5374538,-10.16253340,4.180,7.25,139.88,"Kang, 98 Virginis, κ Vir, BD−09°3878, FK5 523, HD 124294, HIP 69427, HR 5315, SAO 158427",https://en.wikipedia.org/wiki/Kappa_Virginis
 Karaka,15.35.39921,-80.121654,8.70,-49.570,41.135,"Karaka, NSV 7116, CPD–79°844, Gaia DR2 5778418870846853888, HD 137388, HIP 76351, 2MASS J15353994-8012164",https://en.wikipedia.org/wiki/HD_137388
@@ -181,6 +183,9 @@ Sagarmatha,11.35.5152322,-04.45205046,8.42,-11.535,35.586,"Sagarmatha, BD–03°
 Salm,23.20.3824188,23.44252098,4.58,29.45,-9.53,"Salm, 62 Pegasi, BD+22°4810, FK5 880, GC 32503, HIP 115250, HR 8880, HD 220061, SAO 91186",https://en.wikipedia.org/wiki/Tau_Pegasi
 Sham,19.40.0579185,18.00500046,4.38,14.630,-20.160,"Sham, Alsahm, α Sge, 5 Sagittae, BD+17°4042, FK5 1133, GC 27215, HD 185758, HIP 96757, HR 7479, SAO 105120, PPM 136737, CCDM J19401+1801A, WDS J19401+1801A",https://en.wikipedia.org/wiki/Alpha_Sagittae
 Shama,11.24.17359,-01.314467,9.10,-178.689,-159.528,"Shama, BD−00°2437, HD 99109, HIP 55664, SAO 138182",https://en.wikipedia.org/wiki/HD_99109
+Shangcheng,03.11.5626916,74.23371699,4.85,14.158,-86.811,"Shangcheng, BD+73°168, FK5 2222, GC 3759, HD 19275, HIP 14862, HR 932, SAO 4840, GSC 04325-01562",https://en.wikipedia.org/wiki/HD_19275
+Shangwei,06.18.507809,69.1911176,4.76,0.686,-108.270,"Shangwei, BD+69°371, FK5 234, HD 42818, HIP 29997, HR 2209, SAO 13788",https://en.wikipedia.org/wiki/HD_42818
+Shaowei,03.50.21509,71.195616,4.66,18.435,-41.956,"Shaowei, γ Cam, BD+70°259, FK5 138, GC 4557, HD 23401, HIP 17959, HR 1148, SAO 5006, CCDM 03504+7120, WDS J03504+7120A",https://en.wikipedia.org/wiki/Gamma_Camelopardalis
 Sharjah,16.12.4177941,-18.52318117,11.34,36.447,-214.025,"Sharjah, HIP 79431, LP 804-27, NLTT 42226",https://en.wikipedia.org/wiki/HIP_79431
 Shimu,00.47.20326,24.160184,3.92,-101.068,-80.276,"Shimu, ζ And, Zeta Andromedae, Zet And, 34 Andromedae, 34 And, BD+23 106, FK5 27, GC 940, HD 4502, HIP 3693, HR 215, SAO 74267, PPM 90149, CCDM J00473+2416A, WDS 00473+2416A",https://en.wikipedia.org/wiki/Zeta_Andromedae
 Sika,19.22.52985,-32.550859,7.84,88.036,-415.197,"Sika, CD–33°14164, HD 181720, HIP 95262, SAO 211218, PPM 298918, LTT 7666, NLTT 47718, GCRV 69331, 2MASS J19225298-3255079",https://en.wikipedia.org/wiki/HD_181720
@@ -194,6 +199,7 @@ Sāmaya,21.38.0840401,-31.44149385,8.56,21.833,-82.314,"Samaya, CD−32° 16667,
 Taiyi,12.55.2854856,65.26185071,5.225,-3.658,-30.126,"Taiyi, 8 Dra, IR Draconis, BD+66°778, FK5 486, HD 112429, HIP 63076, HR 4916, SAO 15941",https://en.wikipedia.org/wiki/8_Draconis
 Tangra,23.09.5825,18.23459,11.58,17.567,18.639,"Tangra, TOI-5963, TIC 436478932, WASP-21, GSC 01715-00679, 2MASS J23095825+1823459",https://en.wikipedia.org/wiki/WASP-21
 Tapecue,07.47.49720,-54.155092,8.10,148.628,-278.753,"Tapecue, CD−53°2007, HD 63765, HIP 38041, SAO 235521, PPM 336398, LTT 2952, NLTT 18486",https://en.wikipedia.org/wiki/HD_63765
+Tarandus,01.08.4488005,86.15255240,4.244,80.65,-11.54,"Tarandus, 2 UMi, BD+85°19, FK5 906, HD 5848, HIP 5372, HR 285, SAO 181",https://en.wikipedia.org/wiki/2_Ursae_Minoris
 Taygeta,03.45.1249578,24.28022097,4.30,21.24,-40.56,"q Tauri, 19 Tauri, HR 1145, HD 23338, BD+24°547, HIP 17531, SAO 76140, GC 4486, BDS 1848, CCDM 03452+2429",https://en.wikipedia.org/wiki/Taygeta
 Tengshe,22.56.2599839,49.44007587,4.94,-0.649,-2.768,"Tengshe, V424 Lac, BD+48°3887, HR 8726, HD 216946, BD+48°3887, HIP 113288, SAO 52516",https://en.wikipedia.org/wiki/V424_Lacertae
 Terebellum,19.55.5036255,-26.17576933,4.70,203.96,74.40,"Terebellum, ψ Sgr, 58 Sagittarii, CPD−26°6880, FK5 1629, GC 27583, GJ 770.1, GJ 9673, HD 188376, HIP 98066, HR 7597, SAO 188722, PPM 270451",https://en.wikipedia.org/wiki/Omega_Sagittarii
