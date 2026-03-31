@@ -397,11 +397,11 @@ def compareOutputs():
     sky_stars = pd.read_csv("4_all_stars_data.csv")["Common Name"]
     #print(f"All Stars:\n{list(sky_stars)}")
     #print(f"Length of IAU {len(iau_stars)} == Length of Found Stars {len(sky_stars)} = {len(list(iau_stars)) == len(list(sky_stars))}")
-    print(f"Length of IAU == Length of Found Stars - 2 = {len(iau_stars) == len(sky_stars)-2} (-2 to account for Unurgunite and Siwarha duplicate)")
+    print(f"Length of IAU == Length of Found Stars - 3  => {len(iau_stars)} - 3 ==  {len(sky_stars)}  => {len(iau_stars) - 3 == (len(sky_stars))}")
     try:
         assert len(list(iau_stars)) == len(list(sky_stars))-1
     except:
-        print(f"Missing stars =\n{list(set(iau_stars) - set(sky_stars))}")
+        print(f"Missing stars = {list(set(iau_stars) - set(sky_stars))} versus known missing [Siwarha, Pistol Star, Unurgunite]")
 
 def verifyNotFoundTwiceInBackup():
     # verify that stars are not found in two places, defaults to use inthesky, not backup_links or manual additions
