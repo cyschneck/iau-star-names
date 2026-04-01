@@ -3,7 +3,7 @@
 
 All IAU named stars are collected from [IAU-Catalog of Star Names](https://exopla.net/star-names/modern-iau-star-names/)
 
-Last updated: **March 31, 2026**
+Last updated: **April 1, 2026**
 
 `iau_data.csv`:
 - Proper Names
@@ -37,7 +37,7 @@ Last updated: **March 31, 2026**
 > Betelgeuse's companion star, Betelgeuse B (offically named `Siwarha`) was declared on [July 24, 2025](https://iopscience.iop.org/article/10.3847/2041-8213/adeaaf) but, as of yet, has no designation or proper motion so it is not currently included in `stars_with_data.csv`
 
 > [!IMPORTANT]
-> Pistol Star (V4647 Sagittarii) was declared on March 22, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
+> `Pistol Star` (V4647 Sagittarii) was declared on March 22, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
 
 ## Development Environment
 To run or test against this github repo/fork, a development environment can be created via conda/miniconda
