@@ -80,7 +80,7 @@ Ankaa,"Ankaa, α-Phe, Alpha Phoenicis, HR 99, HD 2261, HIP 2081, TYC 7527-1031-1
 Enif,"Enif, ε-Peg, Epsilon Pegasi, 8-Peg, 8 Pegasi, HR 8308, HD 206778, HIP 107315, TYC 1125-2186-1",21.44.11,+09.5230,2.39,26.9,89.1,https://in-the-sky.org/data/object.php?id=TYC1125-2186-1
 Phecda,"Phecda, γ-UMa, Gamma Ursae Majoris, 64-UMa, 64 Ursae Majoris, HR 4554, HD 103287, NSV 5379, HIP 58001, TYC 3833-1034-1",11.53.49,+53.4141,2.39,108.2,84.2,https://in-the-sky.org/data/object.php?id=TYC3833-1034-1
 Sabik,"Sabik, η-Oph, Eta Ophiuchi, 35-Oph, 35 Ophiuchi, HR 6378, HD 155125, HIP 84012, TYC 6232-1333-1",17.10.22,-15.4330,2.43,107.0,22.0,https://in-the-sky.org/data/object.php?id=TYC6232-1333-1
-Izar,"HIP 72105, TYC 2019-1251-1, Gaia EDR3- 1279798794197267072",14.44.59,+27.0427,2.46,55.0,292.5,https://in-the-sky.org/data/object.php?id=TYC2019-1251-1
+Izar,"HIP 72105, TYC 2019-1251-1, Gaia EDR3- 1279798794197267072, Pulcherrima",14.44.59,+27.0427,2.46,55.0,292.5,https://in-the-sky.org/data/object.php?id=TYC2019-1251-1
 Aludra,"Aludra, η-CMa, Eta Canis Majoris, 31-CMa, 31 Canis Majoris, HR 2827, HD 58350, HIP 35904, TYC 6550-4525-1, Gaia EDR3- 5605797194566011520",07.24.05,-29.1811,2.46,7.1,324.5,https://in-the-sky.org/data/object.php?id=TYC6550-4525-1
 Aljanah,"ε-Cyg, Epsilon Cygni, 53-Cyg, 53 Cygni, HR 7949, HD 197989, HIP 102488, TYC 2695-4139-1",20.46.12,+33.5812,2.46,485.6,47.1,https://in-the-sky.org/data/object.php?id=TYC2695-4139-1
 Alderamin,"Alderamin, α-Cep, Alpha Cephei, 5-Cep, 5 Cephei, HR 8162, HD 203280, NSV 13660, HIP 105199, TYC 4252-1870-1",21.18.34,+62.3507,2.47,158.4,71.9,https://in-the-sky.org/data/object.php?id=TYC4252-1870-1
@@ -195,6 +195,7 @@ Homam,"Homam, ζ-Peg, Zeta Pegasi, 42-Peg, 42 Pegasi, HR 8634, HD 214923, HIP 11
 Adhafera,"Adhafera, ζ-Leo, Zeta Leonis, 36-Leo, 36 Leonis, HR 4031, HD 89025, NSV 4804, HIP 50335, TYC 1969-1261-1",10.16.41,+23.2502,3.44,19.6,110.4,https://in-the-sky.org/data/object.php?id=TYC1969-1261-1
 Tania Borealis,"Tania Borealis, λ-UMa, Lambda Ursae Majoris, 33-UMa, 33 Ursae Majoris, HR 4033, HD 89021, HIP 50372, TYC 3007-1286-1",10.17.05,+42.5452,3.44,186.4,255.7,https://in-the-sky.org/data/object.php?id=TYC3007-1286-1
 Achird,"η-Cas, Eta Cassiopeiae, 24-Cas, 24 Cassiopeiae, HR 219, HD 4614, HIP 3821, TYC 3663-2669-1",00.49.05,+57.4859,3.46,1220.0,117.2,https://in-the-sky.org/data/object.php?id=TYC3663-2669-1
+Qigong,"δ-Boo, Delta Bootis, 49-Boo, 49 Bootis, HR 5681, HD 135722, NSV 7002, HIP 74666, TYC 2566-1639-1, Gaia EDR3- 1278391075717325312",15.15.30,+33.1851,3.46,139.9,142.9,https://in-the-sky.org/data/object.php?id=TYC2566-1639-1
 Nganurganity,"σ-CMa, Sigma Canis Majoris, 22-CMa, 22 Canis Majoris, HR 2646, HD 52877, HIP 33856, TYC 6531-3793-1, Gaia EDR3- 5610441600394646016",07.01.43,-27.5605,3.47,7.5,310.6,https://in-the-sky.org/data/object.php?id=TYC6531-3793-1
 Nekkar,"Nekkar, β-Boo, Beta Bootis, 42-Boo, 42 Bootis, HR 5602, HD 133208, NSV 6898, HIP 73555, TYC 3047-1258-1, Gaia EDR3- 1296713990316692096",15.01.56,+40.2325,3.48,50.7,233.5,https://in-the-sky.org/data/object.php?id=TYC3047-1258-1
 Alula Borealis,"Alula Borealis, ν-UMa, Nu Ursae Majoris, 54-UMa, 54 Ursae Majoris, HR 4377, HD 98262, HIP 55219, TYC 2520-2631-1, Gaia EDR3- 757565233820538752",11.18.28,+33.0539,3.48,38.2,316.9,https://in-the-sky.org/data/object.php?id=TYC2520-2631-1
@@ -208,6 +209,7 @@ Ain,"Ain, ε-Tau, Epsilon Tauri, 74-Tau, 74 Tauri, HR 1409, HD 28305, HIP 20889,
 Biham,"Biham, θ-Peg, Theta Pegasi, 26-Peg, 26 Pegasi, HR 8450, HD 210418, NSV 14057, HIP 109427, TYC 565-1999-1",22.10.11,+06.1152,3.53,283.8,83.8,https://in-the-sky.org/data/object.php?id=TYC565-1999-1
 Wasat,"Wasat, δ-Gem, Delta Geminorum, 55-Gem, 55 Geminorum, HR 2777, HD 56986, HIP 35550, TYC 1359-2672-1",07.20.07,+21.5856,3.54,18.0,237.1,https://in-the-sky.org/data/object.php?id=TYC1359-2672-1
 Darlugal,"ζ-Lep, Zeta Leporis, 14-Lep, 14 Leporis, HR 1998, HD 38678, HIP 27288, TYC 5359-1778-1, Gaia EDR3- 2996171698248699904",05.46.57,-14.4919,3.55,14.2,266.9,https://in-the-sky.org/data/object.php?id=TYC5359-1778-1
+Kalasungsang,"ρ-Boo, Rho Bootis, 25-Boo, 25 Bootis, HR 5429, HD 127665, NSV 6697, HIP 71053, TYC 2553-1140-1, Gaia EDR3- 1284537517514584704",14.31.49,+30.2219,3.57,156.4,320.0,https://in-the-sky.org/data/object.php?id=TYC2553-1140-1
 Kaffaljidhma,"γ-Cet, Gamma Ceti, 86-Cet, 86 Ceti, HR 804, HD 16970, HIP 12706, TYC 50-1721-1",02.43.18,+03.1410,3.57,206.6,225.0,https://in-the-sky.org/data/object.php?id=TYC50-1721-1
 Alkaphrah,"κ-UMa, Kappa Ursae Majoris, 12-UMa, 12 Ursae Majoris, HR 3594, HD 77327, NSV 4357, HIP 44471, TYC 3424-1626-1",09.03.37,+47.0923,3.58,66.2,213.2,https://in-the-sky.org/data/object.php?id=TYC3424-1626-1
 Algedi,"Algedi, α²-Cap, Alpha2 Capricorni, 6-Cap, 6 Capricorni, HR 7754, HD 192947, HIP 100064, TYC 5749-2530-1, Gaia EDR3- 6880093650314169984",20.18.03,-12.3241,3.58,61.3,87.7,https://in-the-sky.org/data/object.php?id=TYC5749-2530-1
@@ -229,6 +231,7 @@ Nashira,"Nashira, γ-Cap, Gamma Capricorni, 40-Cap, 40 Capricorni, HR 8278, HD 2
 Safina,"c²-Aqr, c2 Aquarii, 88-Aqr, 88 Aquarii, HR 8812, HD 218594, HIP 114341, TYC 6401-1355-1, Gaia EDR3- 2386316510063903616",23.09.26,-21.1020,3.68,61.4,60.5,https://in-the-sky.org/data/object.php?id=TYC6401-1355-1
 Taiyangshou,"χ-UMa, Chi Ursae Majoris, 63-UMa, 63 Ursae Majoris, HR 4518, HD 102224, NSV 5319, HIP 57399, TYC 3452-2140-1, Gaia EDR3- 786420645182229504",11.46.02,+47.4646,3.69,141.2,281.7,https://in-the-sky.org/data/object.php?id=TYC3452-2140-1
 Electra,"Electra, 17-Tau, 17 Tauri, HR 1142, HD 23302, HIP 17499, TYC 1799-1441-1, Gaia EDR3- 65271996684817280",03.44.52,+24.0647,3.71,50.5,156.0,https://in-the-sky.org/data/object.php?id=TYC1799-1441-1
+Maenalus,"109-Vir, 109 Virginis, HR 5511, HD 130109, NSV 6794, HIP 72220, TYC 326-1426-1, Gaia EDR3- 3655377057091634304",14.46.14,+01.5334,3.72,116.9,259.9,https://in-the-sky.org/data/object.php?id=TYC326-1426-1
 Alshain,"Alshain, β-Aql, Beta Aquilae, 60-Aql, 60 Aquilae, HR 7602, HD 188512, NSV 12557, HIP 98036, TYC 493-3355-1, Gaia EDR3- 4296708789290712064",19.55.18,+06.2416,3.72,483.2,174.5,https://in-the-sky.org/data/object.php?id=TYC493-3355-1
 Ran,"Ran, ε-Eri, Epsilon Eridani, 18-Eri, 18 Eridani, HR 1084, HD 22049, HIP 16537, TYC 5296-1533-1",03.32.55,-09.2729,3.72,975.4,271.1,https://in-the-sky.org/data/object.php?id=TYC5296-1533-1
 Bagu,"δ-Aur, Delta Aurigae, 33-Aur, 33 Aurigae, HR 2077, HD 40035, HIP 28358, TYC 3750-1042-1",05.59.31,+54.1704,3.73,156.1,148.4,https://in-the-sky.org/data/object.php?id=TYC3750-1042-1
