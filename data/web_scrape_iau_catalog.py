@@ -155,12 +155,14 @@ def inTheSkyStarPage(page_link=None, iau_names=None, page_number=None, total_pag
                 iau_name = iau_names.loc[iau_names["HIP"] == HIP_id[0].replace("HIP ", "")]["Proper Names"]
             
             # edge case: Nganurganity and Unurgunite share a Designation/HIP
+            # edge case: Pulcherrima and Izar share the same HIP, but have different designations
             if len(iau_name) == 1:
                 common_name = iau_name.item()
                 print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({id_value})")
             else:
                 common_name = list(iau_name)[0] # Use Nganurganity as Common Name
-                all_names.append(list(iau_name)[1]) # Save Unurgunite as an Alternative Name
+                if list(iau_name)[1] != "Pulcherrima": # ignore Pulcherrima when saving Izar (Pulcherrima is star B, Izar is star A)
+                    all_names.append(list(iau_name)[1]) # Save Unurgunite as an Alternative Name
                 print(f"(Page {page_number}/{total_pages}) Retrieving from in-the-sky = {common_name} ({id_value})")
 
         star_values["Common Name"] = common_name
