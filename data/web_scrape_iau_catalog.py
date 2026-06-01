@@ -399,7 +399,8 @@ def compareOutputs():
     sky_stars = pd.read_csv("4_all_stars_data.csv")["Common Name"]
     #print(f"All Stars:\n{list(sky_stars)}")
     #print(f"Length of IAU {len(iau_stars)} == Length of Found Stars {len(sky_stars)} = {len(list(iau_stars)) == len(list(sky_stars))}")
-    print(f"Length of IAU == Length of Found Stars - 3  => {len(iau_stars)} - 3 ==  {len(sky_stars)}  => {len(iau_stars) - 3 == (len(sky_stars))}")
+    missing_stars = 4
+    print(f"Length of IAU == Length of Found Stars - {missing_stars} => {len(iau_stars)} - {missing_stars} ==  {len(sky_stars)}  => {len(iau_stars) - missing_stars == (len(sky_stars))}")
     try:
         assert len(list(iau_stars)) == len(list(sky_stars))-1
     except:
@@ -445,9 +446,10 @@ if __name__ == '__main__':
     if len(manual_duplicates) > 0:
        print(f"Duplicates found in `0_missing_manual.csv` links that should be removed: {manual_duplicates}")
        exit()
+    
     backupStars(backup_links_csv="0_backup_links.csv",
                 save_csv=True)                              # iterate through backup list of stars
-
+	
     # combine csv into a single star data
     setupFinalCSV(save_csv=True)                            # combine manual missing stars, backup links, and inthesky into a single csv
     # compare outputs to ensure all stars are found
