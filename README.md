@@ -3,7 +3,7 @@
 
 All IAU named stars are collected from [IAU-Catalog of Star Names](https://exopla.net/star-names/modern-iau-star-names/)
 
-Last updated: **June 1, 2026**
+Last updated: **July 7, 2026**
 
 `iau_data.csv`:
 - Proper Names
@@ -30,14 +30,39 @@ Last updated: **June 1, 2026**
 - Alternative Names
 - URL
 
+## Missing Data
 > [!NOTE]
 > IAU WGSN distinguishes between the star `Nganurganity` and `Unurgunite`, even though they share the same Designation (HR 2646) and HIP (33856) that both represent the star [Sigma Canis Majoris](https://en.wikipedia.org/wiki/Sigma_Canis_Majoris). In the `star_data.csv` this will be listed as `Nganurganity` with `Unurgunite` in the list of alternative names
 
 > [!IMPORTANT]
-> Betelgeuse's companion star, Betelgeuse B (offically named `Siwarha`) was declared on [July 24, 2025](https://iopscience.iop.org/article/10.3847/2041-8213/adeaaf) but, as of yet, has no designation or proper motion so it is not currently included in `stars_with_data.csv`
+> Betelgeuse's companion star, Betelgeuse B (offically named `Siwarha`) was declared on July 24, 2025, but, as of yet, has no designation or proper motion so it is not currently included in `stars_with_data.csv`
 
 > [!IMPORTANT]
 > `Pistol Star` (V4647 Sagittarii) was declared on March 22, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
+
+> [!IMPORTANT]
+> `Rosette Eye` (RAFGL 961) was declared on June 13, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
+
+> [!IMPORTANT]
+> `Butterfly Star` (HD 44179) was declared on May 9, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
+
+> [!IMPORTANT]
+> `Red Rectangle` (IRAS 04302+2247) was declared on June 13, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
+
+> [!IMPORTANT]
+> `Beehive Proplyd` (HH 540) was declared on June 13, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
+
+> [!IMPORTANT]
+> `Peony Star` (WR 102ka) was declared on June 13, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
+
+> [!IMPORTANT]
+> `Flying Saucer` 🛸 (2MASS J16281370-2431391) was declared on June 13, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
+
+> [!IMPORTANT]
+> `Southern Crab` (WRAY 16-147) was declared on June 13, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
+
+> [!IMPORTANT]
+> `Frosty Leo` (IRAS 09371+1212) was declared on June 13, 2026, but as of yet, has no proper motion so it is not currently included in `stars_with_data.csv`
 
 ## Development Environment
 To run or test against this github repo/fork, a development environment can be created via conda/miniconda

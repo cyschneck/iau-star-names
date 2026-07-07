@@ -290,7 +290,7 @@ def wikipediaLinks(row_data=None):
         if "apparent magnitude" in row.text.lower() and "v" in row.text.lower():
             mag_text = row.text.strip("\n")
             mag_text = mag_text.replace("\n", "$") # find split point
-            mag_text = mag_text.split("$$")[1]
+            mag_text = mag_text.split("$")[1]
             mag_text = re.sub(r"\[.*?\]","",mag_text) # remove links in brackets
             mag_text = re.sub(r"\(.*?\)","",mag_text) # remove links in parenthesis
             mag_text = mag_text.replace(u'\xa0', u' ')# remove non-breaking space in string
@@ -397,14 +397,27 @@ def compareOutputs():
     # compare number of stars with official names to number of stars found with full list of properties
     iau_stars = pd.read_csv("1_iau_stars.csv")["Proper Names"]
     sky_stars = pd.read_csv("4_all_stars_data.csv")["Common Name"]
-    #print(f"All Stars:\n{list(sky_stars)}")
-    #print(f"Length of IAU {len(iau_stars)} == Length of Found Stars {len(sky_stars)} = {len(list(iau_stars)) == len(list(sky_stars))}")
-    missing_stars = 4
-    print(f"Length of IAU == Length of Found Stars - {missing_stars} => {len(iau_stars)} - {missing_stars} ==  {len(sky_stars)}  => {len(iau_stars) - missing_stars == (len(sky_stars))}")
+    known_missing_stars = ["Siwarha",
+                           "Pistol Star",
+                           "Unurgunite",
+                           "Rosette Eye",
+                           "Red Rectangle",
+                           "Butterfly Star",
+                           "Beehive Proplyd",
+                           "Peony Star",
+                           "Flying Saucer",
+                           "Southern Crab",
+                           "Frosty Leo"]
+    known_missing_stars.sort()
+    print(f"Length of Found Stars - {len(known_missing_stars)} == Length of IAU")
+    print(f"{len(iau_stars)} - {len(known_missing_stars)} ==  {len(sky_stars)}")
+    print(f"{len(iau_stars) - len(known_missing_stars)} == {len(sky_stars)} ==> {len(list(iau_stars)) - len(known_missing_stars) == len(list(sky_stars))}")
     try:
-        assert len(list(iau_stars)) == len(list(sky_stars))-1
+        assert len(list(iau_stars)) - len(known_missing_stars) == len(list(sky_stars))
     except:
-        print(f"Missing stars = {list(set(iau_stars) - set(sky_stars))} versus known missing [Siwarha, Pistol Star, Unurgunite]")
+        missing_stars_found = list(set(iau_stars) - set(sky_stars))
+        missing_stars_found.sort()
+        print(f"Missing stars = \n{missing_stars_found}\nversus known missing\n{known_missing_stars}")
 
 def verifyNotFoundTwiceInBackup():
     # verify that stars are not found in two places, defaults to use inthesky, not backup_links or manual additions
@@ -449,7 +462,7 @@ if __name__ == '__main__':
     
     backupStars(backup_links_csv="0_backup_links.csv",
                 save_csv=True)                              # iterate through backup list of stars
-	
+
     # combine csv into a single star data
     setupFinalCSV(save_csv=True)                            # combine manual missing stars, backup links, and inthesky into a single csv
     # compare outputs to ensure all stars are found
